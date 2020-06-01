@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <title>PrettySouline</title>
+</head>
+<body>
+    <h2><img alt="Qries" src="logo.jpg" width="250" height="150"></h2>
+    <!-- <div class="header"> -->
+        <div class="button">
+            <button><a href="#ABOUT">ABOUT</a></button>
+            <button><a href="#GALLERY">GALLERY</a></button>
+            <button><a href="#CONTACT">CONTACT</a></button>
+        </div>
+        <div class="clr"></div>
+    <!-- </div> -->
+
+    <div id="about">
+    <h1><a name="#ABOUT"></a>ABOUT</h1>
+    <p>
+        The Beginning
+        1 In the beginning God created the heavens and the earth.    
+        </p>
+    </div>
+
+    <div class="header" id="myHeader">
+        <h1>Image Grid</h1>
+        <p>Click on the buttons to change the grid view.</p>
+        <button class="btn" onclick="one()">1</button>
+        <button class="btn active" onclick="two()">2</button>
+        <button class="btn" onclick="four()">4</button>
+      </div>
+
+    <!-- <div id="gallery"> -->
+        <h1><a name="GALLERY"></a>GALLERY</h1>
+        
+        <div class="row"> 
+            <div class="column">
+                <img src="index3.jpg" style="width:100%">
+                <img src="index.jpg" style="width:100%">
+                <img src="index2.jpg" style="width:100%">
+                <img src="index4.jpg" style="width:100%">
+                <img src="index.jpg" style="width:100%">
+                <img src="index4.jpg" style="width:100%">
+                <img src="index3.jpg" style="width:100%">
+            </div>
+            <div class="column">
+                <img src="index2.jpg" style="width:100%">
+                <img src="index.jpg" style="width:100%">
+                <img src="index4.jpg" style="width:100%">
+                <img src="index3.jpg" style="width:100%">
+                <img src="index2.jpg" style="width:100%">
+                <img src="index.jpg" style="width:100%">
+            </div>  
+            <div class="column">
+              <img src="index3.jpg" style="width:100%">
+              <img src="index.jpg" style="width:100%">
+              <img src="index2.jpg" style="width:100%">
+              <img src="index4.jpg" style="width:100%">
+              <img src="index.jpg" style="width:100%">
+              <img src="index4.jpg" style="width:100%">
+              <img src="index3.jpg" style="width:100%">
+            </div>
+            <div class="column">
+              <img src="index2.jpg" style="width:100%">
+              <img src="index.jpg" style="width:100%">
+              <img src="index4.jpg" style="width:100%">
+              <img src="index3.jpg" style="width:100%">
+              <img src="index2.jpg" style="width:100%">
+              <img src="index.jpg" style="width:100%">
+            </div>
+          </div>
+          
+        <!-- <img alt="Qries" src="index.jpg" width="400" height="400">
+        <img alt="index2" src="index2.jpg" width="400" height="400">
+        <img alt="index2" src="index4.jpg" width="400" height="400">
+        <img alt="Qries" src="index3.jpg" width="400" height="400"> -->
+    <!-- </div> -->
+
+    <div id="contact">
+        <h1><a name="CONTACT"></a>CONTACT</h1>
+        <a href="https://www.facebook.com/pg/Prettysoul-1727488437497500/posts/"><img src="facebook.png" width="82" height="86" alt="facebook"></a>
+        <a href="https://www.facebook.com/1727488437497500/photos/a.1727501434162867/2564963310416671/?type=3&eid=ARBS55N9yelWXvyfZ-rVLqNbWvswUPu5Lx86n6qD5_BltyDZMCVeGitYZ89KUOObLfqMLQWYEryYWyGd&__xts__%5B0%5D=68.ARD6IB73JUf-rTvuQihWnxF3V0RbX-9QQEk-oNdxmPjkVf63ITBuUMZH7SXqChnONSRDdYBEvzN_vVIsQlwGgOagCUFh9oe_lzt_UNDZsXb_a-l_KMPzh-UrospKNfuxCw5e1h9VR_h5b0xuPn_4QoyXUhqEqhFsQVPY6Ey7FoZOOSC3xmYU9DOaSuIgaAjfOYl5MiLIscDeEAAsT1iHjD-IPAQBo7r3m7BQlR91IrhQcUASogaxo0zpIVGknWCxXLcgGvQu2l4BDX_ckByb85iQ4BznuX8_X2tOTU0Rt209NKoSuZyK7TmmztAuYEs7-vpd8U5scOgfi1t9oxJklcSYl2JP&__tn__=EHH-R"><img src="whatsapp.png" width="82" height="86" alt="facebook"></a>
+    </div>
+   
+    <script>
+        // Get the elements with class="column"
+        var elements = document.getElementsByClassName("column");
+        
+        // Declare a loop variable
+        var i;
+        
+        // Full-width images
+        function one() {
+            for (i = 0; i < elements.length; i++) {
+            elements[i].style.msFlex = "100%";  // IE10
+            elements[i].style.flex = "100%";
+          }
+        }
+        
+        // Two images side by side
+        function two() {
+          for (i = 0; i < elements.length; i++) {
+            elements[i].style.msFlex = "50%";  // IE10
+            elements[i].style.flex = "50%";
+          }
+        }
+        
+        // Four images side by side
+        function four() {
+          for (i = 0; i < elements.length; i++) {
+            elements[i].style.msFlex = "25%";  // IE10
+            elements[i].style.flex = "25%";
+          }
+        }
+        
+        // Add active class to the current button (highlight it)
+        var header = document.getElementById("myHeader");
+        var btns = header.getElementsByClassName("btn");
+        for (var i = 0; i < btns.length; i++) {
+          btns[i].addEventListener("click", function() {
+            var current = document.getElementsByClassName("active");
+            current[0].className = current[0].className.replace(" active", "");
+            this.className += " active";
+          });
+        }
+        </script>
+    
+</body>
+
+</html>
